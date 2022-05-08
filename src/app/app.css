@@ -1,0 +1,39 @@
+
+.app {
+    margin: 35px auto;
+    max-width: 1400px;
+}
+
+.app__info {
+    max-width: 250px; 
+}
+
+.app__input {
+    margin: 35px 0 auto 50px;
+    padding: 15px 15px;
+    text-align: right;
+    border-radius: 4px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, .3);
+    color: #000;
+    background-color: rgba(198, 197, 201, 0.5);
+
+}
+
+.app__tasks {
+    margin: 35px auto; 
+    padding: 15px 15px;
+    text-align: right;
+    border-radius: 4px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, .3);
+    color: #000;
+    background-color: rgba(198, 197, 201, 0.5);
+}
+
+.app__newtask {
+    max-width: 550px;
+}
+
+.app__search {
+    max-width: 250px;
+}
+

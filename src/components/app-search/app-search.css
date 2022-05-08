@@ -1,0 +1,29 @@
+* {box-sizing: border-box;}
+.form-search {
+  position: relative;
+  width: 270px;
+  margin: 0 auto;
+  margin-left: 20px;
+}
+.input-search {
+    width: 100%;
+    height: 42px;
+    padding-left: 10px;
+    border: 2px solid #787A91;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+    color: #706f6f;
+  }
+.btn-search {
+    position: absolute; 
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #787A91;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: #fff;
+  }

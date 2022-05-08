@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Design"
+    },
+    {
+      "id": 2,
+      "name": "Frontend"
+    },
+    {
+      "id": 3,
+      "name": "Backend"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "projectID": 1,
+      "name": "ТЗ",
+      "desc": "Составление и согласование ТЗ с заказчиком",
+      "increase": true
+    },
+    {
+      "id": 2,
+      "projectID": 1,
+      "name": "Верстка на Figma",
+      "desc": "Создать макет сайта в соответствии с ТЗ на Figma",
+      "increase": false
+    },
+    {
+      "id": 3,
+      "projectID": 1,
+      "name": "Составить бизнес-логику",
+      "desc": "Нужно провести мозговой штурм что хочет заказчик...",
+      "increase": false
+    },
+    {
+      "projectID": 1,
+      "name": "Задача",
+      "desc": "Какое-то описание",
+      "increase": true,
+      "id": 4
+    }
+  ],
+  "filters": [
+    {
+      "id": 1,
+      "name": "all"
+    },
+    {
+      "id": 2,
+      "name": "complete"
+    },
+    {
+      "id": 3,
+      "name": "uncomplete"
+    }
+  ]
+}

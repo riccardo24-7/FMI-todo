@@ -1,0 +1,34 @@
+
+
+.filet-field {
+    text-align: right;
+}
+
+
+
+.btn-filter {
+    vertical-align: top;
+    color: #787A91;
+    margin-right: 25px;
+}
+
+.filter-btn {
+    margin: 10px 5px 0 0;
+    border-color: #787A91;
+}
+
+.filter-btn-active {
+    margin: 10px 5px 0 0;
+    background-color: #787A91;
+    border-color: #787A91;
+}
+
+.filter-btn:hover,.filter-btn-active:hover {
+    background-color: #787A91; 
+}
+
+.filter-buttons {
+    height: 50px;
+    width: 200px;
+    text-align: right;
+}
