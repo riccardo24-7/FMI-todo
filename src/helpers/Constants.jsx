@@ -1,1 +1,1 @@
-export const JSON_API = 'https://app-todo-fmi.herokuapp.com/api'
+export const JSON_API = 'https://app-todo-fmi.herokuapp.com'
