@@ -38,9 +38,9 @@
     {
       "projectID": 1,
       "name": "Задача",
-      "desc": "Какое-то описание",
-      "increase": true,
-      "id": 4
+      "desc": "",
+      "increase": false,
+      "id": 5
     }
   ],
   "filters": [
