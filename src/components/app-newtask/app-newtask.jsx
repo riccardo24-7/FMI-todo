@@ -23,7 +23,7 @@ class AppNewTask extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         if (this.state.taskname.length < 3) return;
-        axios.post("http://localhost:3001/tasks", {
+        axios.post("http://localhost:8001/tasks", {
             projectID: 1,
             name: this.state.taskname,
             desc: "",

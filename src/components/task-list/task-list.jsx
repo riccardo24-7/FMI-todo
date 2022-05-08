@@ -9,7 +9,7 @@ const TaskList = ({data, onDelete, onToggleIncrease, onUpdateTaskName}) => {
             key = {id} 
             {...itemProps}
             idTask = {id}
-            onDelete = {() => fetch("http://localhost:3001/tasks/" + id, { method: 'DELETE' }).then(()=>{
+            onDelete = {() => fetch("http://localhost:8001/tasks/" + id, { method: 'DELETE' }).then(()=>{
                 onDelete(id)
             })}
             onToggleIncrease = {() => onToggleIncrease(id)}
