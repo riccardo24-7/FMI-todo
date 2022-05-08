@@ -8,6 +8,7 @@ import AppSearch from "../components/app-search/app-search";
 import AppFilter from "../components/app-filter/app-filter";
 import TaskList from "../components/task-list/task-list";
 import AppNewTask from "../components/app-newtask/app-newtask";
+import { JSON_API } from "../helpers/Constants";
 
 import './app.css';
 
@@ -27,9 +28,9 @@ class App extends Component {
 
     componentDidMount() {
         
-        axios.get("http://localhost:8001/projects").then(({data}) => this.setState({projectname: data[0].name}))
-        axios.get("http://localhost:8001/tasks?_embed=project").then(({data}) => this.setState({data: data}))
-        axios.get("http://localhost:8001/filters").then(({data}) => this.setState({filter: data}))
+        axios.get(`${JSON_API}/projects`).then(({data}) => this.setState({projectname: data[0].name}))
+        axios.get(`${JSON_API}/tasks?_embed=project`).then(({data}) => this.setState({data: data}))
+        axios.get(`${JSON_API}/filters`).then(({data}) => this.setState({filter: data}))
 
       }
 
@@ -66,7 +67,7 @@ class App extends Component {
         this.setState(({data}) => ({
             data: data.map(item => {
                 if (item.id === id) {
-                    axios.patch("http://localhost:8001/tasks/" + id, {
+                    axios.patch(`${JSON_API}/tasks/` + id, {
                         increase: !item.increase
                     }).catch(()=>{alert("Не удалось обновить состояние задачи")})
                     return {...item, increase: !item.increase}
@@ -107,7 +108,7 @@ class App extends Component {
     }
 
     onUpdateProjectName = (projectname) => {
-        axios.patch("http://localhost:8001/projects/" + 1, {
+        axios.patch(`${JSON_API}/projects/` + 1, {
             name: projectname
         }).catch(()=>{alert("Не удалось обновить название проекта")})
         this.setState({projectname});
@@ -119,13 +120,13 @@ class App extends Component {
             data: data.map(item => {
                 if (item.id === id) {
                     if (item.name !== newtaskName) {
-                        axios.patch("http://localhost:8001/tasks/" + id, {
+                        axios.patch(`${JSON_API}/tasks/` + id, {
                             name: newtaskName
                         }).catch(()=>{alert("Не удалось обновить название задачи")})
                         item.name = newtaskName;
                     }
                     if (item.desc !== desc) {
-                        axios.patch("http://localhost:8001/tasks/" + id, {
+                        axios.patch(`${JSON_API}/tasks/` + id, {
                             desc: desc
                         }).catch(()=>{alert("Не удалось обновить описание задачи")})
                         item.desc = desc;

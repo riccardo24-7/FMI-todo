@@ -1,4 +1,5 @@
 import TaskListItem from "../task-list-item/task-list-item";
+import { JSON_API } from "../../helpers/Constants";
 
 const TaskList = ({data, onDelete, onToggleIncrease, onUpdateTaskName}) => {
 
@@ -9,7 +10,7 @@ const TaskList = ({data, onDelete, onToggleIncrease, onUpdateTaskName}) => {
             key = {id} 
             {...itemProps}
             idTask = {id}
-            onDelete = {() => fetch("http://localhost:8001/tasks/" + id, { method: 'DELETE' }).then(()=>{
+            onDelete = {() => fetch(`${JSON_API}/tasks/` + id, { method: 'DELETE' }).then(()=>{
                 onDelete(id)
             })}
             onToggleIncrease = {() => onToggleIncrease(id)}

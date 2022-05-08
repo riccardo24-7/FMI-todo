@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import axios from 'axios';
 
+import { JSON_API } from '../../helpers/Constants';
+
 import './app-newtask.css'
 
 
@@ -23,7 +25,7 @@ class AppNewTask extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         if (this.state.taskname.length < 3) return;
-        axios.post("http://localhost:8001/tasks", {
+        axios.post(`${JSON_API}/tasks`, {
             projectID: 1,
             name: this.state.taskname,
             desc: "",
