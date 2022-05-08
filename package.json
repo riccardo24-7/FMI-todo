@@ -20,8 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "fake-json": "json-server ./src/assets/db.json --watch --port 3001",
-    "start": "concurrently \"npm run deploy\" \"npm run fake-json\"",
-    "create": "concurrently \"npm run build\" \"npm run fake-json\""
+    "start": "concurrently \"npm run deploy\" \"npm run fake-json\""
   },
   "eslintConfig": {
     "extends": [
