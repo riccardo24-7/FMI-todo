@@ -17,11 +17,12 @@
   },
   "scripts": {
     "start": "node server.js",
+    "app-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "fake-json": "json-server ./src/assets/db.json --watch --port 3001",
-    "deploy": "concurrently \"npm run deploy\" \"npm run fake-json\""
+    "deploy": "concurrently \"npm run app-start\" \"npm run fake-json\""
   },
   "eslintConfig": {
     "extends": [

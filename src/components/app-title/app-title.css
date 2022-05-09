@@ -55,11 +55,12 @@
 
 .time-title {
     display: table-cell;
-    width: 300px;
+    width: 400px;
     padding-left: 20px; 
 }
 .auth-btn {
     display: table-cell;
+    width: 200px;
     text-align: right; 
 }
 
